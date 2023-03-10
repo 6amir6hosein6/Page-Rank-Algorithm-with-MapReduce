@@ -1,0 +1,14 @@
+1- First, using the list, we create a graph in the form of a matrix of word relationships, in which the graph is 1 if there is a relationship and 0 otherwise.
+
+2- In each column, which shows how many connections there are to each of the words, and dividing the column values by that, we calculate the chance of a relationship between all the links that are related to this word.
+ 
+3- A column matrix whose number of records is equal to the number of existing nodes and at first we assign the initial value of 1/n to it to have an initial value.
+
+3- We multiply the values of the column by a constant value of 1000 so that during the calculation of the algorithm its value is too small and does not go out of the variable memory volume.
+
+4- And then we run the calculation of this formula several times (for example 100) so that after that we have the pagerank coefficients.
+
+5- Finally, we put the obtained values in the final_oage_rank.csv file to see the values
+
+
+Source: https://www.youtube.com/watch?v=J1UFeOj4eIs&list=PLH7W8KdUX6P2n4XwDiKsEU6sBhQj5cAqa

@@ -1,0 +1,13 @@
+Calculation formula idf(t) = log(N/(df + 1))
+
+
+This measure is the amount of information that the word provides about the subject of the document. It is a report of the ratio of the number of documents to the number of documents containing the word.
+
+We log this ratio because when the figure is enlarged, the IDF values can become large and cause it to explode, so taking log reduces this effect. We cannot divide by 0, we smooth the value by adding 1 to the denominator.
+
+We set a key and its value to 1 for each word
+And finally, we keep a key named ###TOTAL_NUMBER_OF_DOCUMENTS###, which indicates the number of documents in the dataset.
+
+By giving this value to Partition and then giving it to reducer and executing the formula mentioned above, we calculate the IDF value for each word.
+
+Source: https://medium.com/@ashwinnaidu1991/creating-a-tf-idf-model-from-scratch-in-python-71047f16494e
